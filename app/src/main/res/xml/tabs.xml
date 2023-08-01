@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <tab
+        drawable="@drawable/home"
+        text="Home" />
+
+    <tab
+        drawable="@drawable/search"
+        text="Search" />
+
+    <tab
+        drawable="@drawable/more"
+        text="Add" />
+
+    <tab
+        drawable="@drawable/reel"
+        text="Reels" />
+
+    <tab
+        drawable="@drawable/profilename"
+        text="Profile" />
+
+</tabs>

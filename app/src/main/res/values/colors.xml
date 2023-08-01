@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#509F78</color>
+    <color name="purple_500">#509F78</color>
+    <color name="purple_700">#509F78</color>
+    <color name="teal_200">#509F78</color>
+    <color name="teal_700">#509F78</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_main_color">#0F9D58</color>
+    <color name="bg_all">#F2F2F2</color>
+    <color name="grad_start">#828D97</color>
+    <color name="bg_frag">#F4F4F4</color>
+    <color name="bg_demo">#EDEDED</color>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/story_profile"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:riv_border_color="#6CB395"
+            app:riv_border_width="1dip"
+            app:riv_corner_radius_bottom_left="10dp"
+            app:riv_corner_radius_bottom_right="10dp"
+            app:riv_corner_radius_top_left="10dp"
+            app:riv_corner_radius_top_right="10dp"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat" />
+
+        <com.devlomi.circularstatusview.CircularStatusView
+            android:id="@+id/status_circle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/orage_circle"
+            app:portion_color="#B7EF56"
+            app:portion_spacing="4dp"
+            app:portion_width="2dp"
+            app:portions_count="5"
+            app:layout_constraintTop_toTopOf="@id/story"
+            app:layout_constraintBottom_toBottomOf="@id/story"
+            app:layout_constraintLeft_toLeftOf="@id/story"
+            app:layout_constraintRight_toRightOf="@id/story"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/story"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/story_profile" />
+
+        <TextView
+            android:id="@+id/username_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/andika"
+            android:gravity="center"
+            android:text="User 2"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/story_profile"
+            app:layout_constraintStart_toStartOf="@+id/story" />
+
+        <ImageView
+            android:id="@+id/storyType"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/live"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

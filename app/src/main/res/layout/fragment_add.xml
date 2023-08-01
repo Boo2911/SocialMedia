@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.AddFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Create Post"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_follow_btn"
+        android:text="post"
+        android:textColor="@color/grad_start"
+        android:textSize="16sp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/grad_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/post_profile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:padding="3dp"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+    <TextView
+        android:id="@+id/post_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="username"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/post_profession"
+        app:layout_constraintStart_toEndOf="@+id/post_profile"
+        app:layout_constraintTop_toBottomOf="@+id/divider5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/post_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="profession"
+        android:textColor="@color/grad_start"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_profile"
+        app:layout_constraintStart_toStartOf="@+id/post_username"
+        app:layout_constraintTop_toBottomOf="@+id/post_username" />
+
+
+    <ImageView
+        android:id="@+id/post"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/profile"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_profile" />
+
+    <EditText
+        android:id="@+id/post_caption"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/bt_et"
+        android:ems="10"
+        android:hint="Caption here.."
+        android:inputType="text"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:layout_margin="6dp"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@+id/divider6"
+        app:layout_constraintEnd_toEndOf="@id/post"
+        app:layout_constraintStart_toStartOf="@+id/post"
+        app:layout_constraintTop_toBottomOf="@+id/post" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/grad_start"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Add your post.."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/divider6" />
+
+    <ImageView
+        android:id="@+id/btn_add_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/addimage"
+        app:layout_constraintBottom_toBottomOf="@id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView2"
+        app:tint="@color/app_main_color" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

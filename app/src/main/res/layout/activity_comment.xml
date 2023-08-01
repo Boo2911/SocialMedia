@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#338F62"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Comments"
+        app:navigationIconTint="@color/white"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/addCommentView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_comments">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/post_comment"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="2dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/profileavatar" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@color/bg_frag"
+                app:layout_constraintBottom_toBottomOf="@id/profile_image"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintLeft_toLeftOf="@id/profile_image"
+                app:layout_constraintRight_toRightOf="@id/profile_image"
+                app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+            <TextView
+                android:id="@+id/name_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_uname"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                android:text="username"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+                app:layout_constraintStart_toEndOf="@+id/view5"
+                app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/profile"
+                app:civ_border_color="@color/bg_frag"
+                app:civ_border_width="3dp"
+                app:layout_constraintBottom_toBottomOf="@id/post_comment"
+                app:layout_constraintStart_toStartOf="@id/post_comment" />
+
+            <TextView
+                android:id="@+id/caption_post"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="caption here.."
+                app:layout_constraintEnd_toEndOf="@id/post_comment"
+                app:layout_constraintStart_toStartOf="@id/post_comment"
+                app:layout_constraintTop_toBottomOf="@id/post_comment" />
+
+            <LinearLayout
+                android:id="@+id/section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/caption_post"
+                app:layout_constraintStart_toStartOf="@+id/caption_post"
+                app:layout_constraintTop_toBottomOf="@+id/caption_post">
+
+                <TextView
+                    android:id="@+id/likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/heart"
+                    android:drawablePadding="5dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="15dp"
+                    android:drawableLeft="@drawable/comment"
+                    android:drawablePadding="5dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/send"
+                    android:drawablePadding="5dp"
+                    android:text="0" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/bg_frag"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/section" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/addCommentView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_follow_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/addCommentet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addCommentet" />
+
+    <EditText
+        android:id="@+id/addCommentet"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/transparent_bg"
+        android:ems="10"
+        android:hint="Add Comment here.."
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:padding="6dp"
+
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_send_comment"
+        app:layout_constraintStart_toStartOf="@+id/addCommentView" />
+
+    <ImageView
+        android:id="@+id/btn_send_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addCommentet"
+        app:layout_constraintEnd_toEndOf="@+id/addCommentView"
+        app:layout_constraintTop_toTopOf="@+id/addCommentet"
+        app:srcCompat="@drawable/sendcomment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
