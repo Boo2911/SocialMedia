@@ -19,15 +19,13 @@ Tech Stack
 Android Development (Java)
 Firebase (Realtime Database, Authentication)
 
-<p align="center">
-  <img src="![screen_1](https://github.com/Boo2911/SocialMedia/assets/81471764/5c32253e-73ae-4753-9318-2f1e785af239)" width="30%" alt="Screenshot 1">
-  <img src="![screen_2](https://github.com/Boo2911/SocialMedia/assets/81471764/eafb60e3-14c4-4730-ac06-97aae8f15bba)" width="30%" alt="Screenshot 2">
-  <img src="![screen_3](https://github.com/Boo2911/SocialMedia/assets/81471764/02c685ce-9450-4d2e-af83-05cd90d84f5b)" width="30%" alt="Screenshot 3">
-</p>
+![screen_1](https://github.com/Boo2911/SocialMedia/assets/81471764/5c32253e-73ae-4753-9318-2f1e785af239)
 
 
+![screen_2](https://github.com/Boo2911/SocialMedia/assets/81471764/eafb60e3-14c4-4730-ac06-97aae8f15bba)
 
 
+![screen_3](https://github.com/Boo2911/SocialMedia/assets/81471764/02c685ce-9450-4d2e-af83-05cd90d84f5b)
 
 
 ![screen_3](https://github.com/Boo2911/SocialMedia/assets/81471764/02c685ce-9450-4d2e-af83-05cd90d84f5b)
